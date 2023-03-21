@@ -1,13 +1,11 @@
-#include "dog.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "dog.h"
 
 /**
- *print_dog - prints struct dog
- *@d: contaains elements name age and owner
- *
+ * print_dog - prints a struct dog
+ * @d: struct dog to print
  */
-
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
@@ -18,5 +16,5 @@ void print_dog(struct dog *d)
 	if (d->owner == NULL)
 		d->owner = "(nil)";
 
-	printf("Name: %s\nOwner: %s\nAge: %f\n", d->name, d->owner, d->age);
+	printf("Name: %s\nAge: %f\nOwner: %s\n", d->name, d->age, d->owner);
 }
