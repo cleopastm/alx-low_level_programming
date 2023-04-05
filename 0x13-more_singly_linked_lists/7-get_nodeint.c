@@ -21,7 +21,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 			return (current_node);
 		}
 		c++;
-		current_node = current->next;
+		current_node = current_node->next;
 	}
 	return (NULL);
 }
