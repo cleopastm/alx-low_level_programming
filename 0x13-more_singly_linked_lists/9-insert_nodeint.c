@@ -4,6 +4,7 @@
 /**
  * insert_nodeint_at_index - function that inserts new node at a given position
  * @head: pointer to the first node
+ * @idx: is the index of the list where the new node should be added
  * @n: value for the new node
  *
  * Return: adress of new node or else nil
