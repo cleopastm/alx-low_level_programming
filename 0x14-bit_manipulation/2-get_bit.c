@@ -9,7 +9,7 @@
  * Return: the value of the bit at index index or -1 if an error occured
  */
 
-the value of the bit at index index or -1 if an error occured
+int get_bit(unsigned long int n, unsigned int index)
 {
 	unsigned long int bit;
 
@@ -19,5 +19,5 @@ the value of the bit at index index or -1 if an error occured
 	}
 	bit = 1UL << index;
 
-	return (1 : 0);
+	return ((n & bit) ? 1 : 0);
 }
