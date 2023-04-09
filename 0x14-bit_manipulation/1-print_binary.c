@@ -10,20 +10,27 @@
 
 void print_binary(unsigned long int n)
 {
-	unsigned int a;
-	unsigned long int b = 1UL << (sizeof(unsigned long int) * 8 - 1);
-	unsigned int c = (unsigned int) sizeof(unsigned long int ) * 8;
+	int c;
+	int a;
+	unsigned long int b;
 
-	for ( a = 0; a < c; a++)
+	a = 0;
+
+	for (c = 63; c >= 0; c--)
 	{
-		if (n & b)
+		b = n >> c;
+		if (b & 1)
 		{
 			_putchar('1');
+			a++;
 		}
-		else
+		else if (a)
 		{
 			_putchar('0');
 		}
-		b >>= 1;
+	}
+	if (!a)
+	{
+		_putchar('0');
 	}
 }
